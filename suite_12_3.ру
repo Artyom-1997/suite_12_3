@@ -1,0 +1,32 @@
+import unittest
+import suite_12_3
+
+class TestSuite(unittest.TestSuite):
+    def test_add(self):
+        self.assertEqual(test.add())
+
+    def test_sub(self):
+        self.assertEqual(cals.sub())
+
+    def test_mul(self):
+        self.assertEqual(cals.mul())
+
+    def test_div(self):
+        self.assertEqual(calc.div())
+
+if __name__ == "__main__":
+    calc_test_suite = unittest.TestSuite()
+    calc_test_suite.addTest(unittest.makeSuite(suite_12_3.CalsTest))
+
+    runner = unittest.TextTestRunner(verbosity=2)
+    runner.run(calc_test_suite)
+
+    test_tournament = unittest.TestSuite()
+    suites = test_tournament.is_frozen == False
+    runner = unittest.TextTestRunner(verbosity=2)
+    runner.run(suites)
+
+    test_tournament = unittest.TestSuite()
+    suites = test_tournament.is_frozen = True
+    runner = unittest.TextTestRunner(verbosity=2)
+    runner.run(suites)
